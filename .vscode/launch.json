@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "./kernel/liteos_a/out/hi3516dv300/liteos",
+            "name": "hi3516dv300-openocd-debug-gdb",
+            "request": "attach",
+            "type": "deveco-debug",
+            "servertype": "openocd",
+            "showDevDebugOutput": "0",
+            "maxBreakpoints": "6",
+            "configFiles": [
+                "C:\\Users\\DDH\\.deveco\\ohos_bundles\\@huawei\\deveco_config\\openocd\\hi3516dv300\\openocd.cfg",
+                "C:\\Users\\DDH\\.deveco\\ohos_bundles\\@huawei\\deveco_config\\openocd\\hi3516dv300\\chip.cfg"
+            ],
+            "openOCDLaunchCommands": [
+                "init"
+            ],
+            "postAttachCommands": [
+                "show substitute-path",
+                "monitor cortex_a maskisr on",
+                "monitor gdb_breakpoint_override hard",
+                "set remotetimeout unlimited",
+                "set $pc=0x80000000",
+                "break OsMain"
+            ],
+            "postRestartCommands": [
+                "monitor mww phys 0x12020004 0"
+            ],
+            "armToolchainPath": "${config:deveco-debug.armToolchainPath}"
+        }
+    ]
+}

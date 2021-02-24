@@ -1,0 +1,9 @@
+{
+    "ohos": {
+        "board": "hi3516dv300",
+        "kernel": "liteos_a",
+        "os": "1.0.0"
+    },
+    "name": "ddw",
+    "version": "1.0.0"
+}
