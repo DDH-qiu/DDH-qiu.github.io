@@ -2,7 +2,7 @@
 ;(function () {
   var style1 = 'background:#4BB596;color:#ffffff;border-radius: 2px;'
   var style2 = 'color:auto;'
-  var author = ' TMaize'
+  var author = '测试' 
   var github = ' https://github.com/TMaize/tmaize-blog'
   var build = ' ' + blog.buildAt.substr(0, 4)
   build += '/' + blog.buildAt.substr(4, 2)
