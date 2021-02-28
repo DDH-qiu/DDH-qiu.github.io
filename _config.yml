@@ -5,6 +5,7 @@ title: DDH page
 description: 邱某的百草园
 keywords: TMaize,Blog,Java,Html,JavaScript
 author: DDH-qiu
+footerText: 'DDH-qiu  pcbbug@qq.com'
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
