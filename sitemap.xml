@@ -146,13 +146,6 @@
 
   
   <url>
-    <loc>http://lfalc.com/tags/%E8%AF%BE%E4%B8%9A/</loc>
-    <lastmod>2023-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://lfalc.com/tags/sundry/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -160,14 +153,7 @@
   </url>
   
   <url>
-    <loc>http://lfalc.com/tags/Tools/</loc>
-    <lastmod>2023-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://lfalc.com/tags/git/</loc>
+    <loc>http://lfalc.com/tags/%E8%AF%BE%E4%B8%9A/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -182,6 +168,20 @@
   
   <url>
     <loc>http://lfalc.com/tags/python/</loc>
+    <lastmod>2023-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lfalc.com/tags/Tools/</loc>
+    <lastmod>2023-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://lfalc.com/tags/git/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -211,13 +211,6 @@
 
   
   <url>
-    <loc>http://lfalc.com/categories/%E8%AF%BE%E4%B8%9A/</loc>
-    <lastmod>2023-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://lfalc.com/categories/sundry/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -225,7 +218,7 @@
   </url>
   
   <url>
-    <loc>http://lfalc.com/categories/Tools/</loc>
+    <loc>http://lfalc.com/categories/%E8%AF%BE%E4%B8%9A/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -239,6 +232,13 @@
   </url>
   
   <url>
+    <loc>http://lfalc.com/categories/Tools/</loc>
+    <lastmod>2023-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://lfalc.com/categories/note/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -246,14 +246,14 @@
   </url>
   
   <url>
-    <loc>http://lfalc.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://lfalc.com/categories/algotithm/python/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://lfalc.com/categories/algotithm/python/</loc>
+    <loc>http://lfalc.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
