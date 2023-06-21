@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>html学习笔记 | 百草园</title>
+  <meta name="description" content="html学习笔记1-标签的关系父子关系（嵌套关系）兄弟关系（并列关系） 2-注释对代码进行解释说明工作  vscode中使用快捷键ctrl+&#x2F; 3-标题标签标签名：h1-h6（双标签）h1-h6逐级递减h1-标题&#x2F;logo独占一行 4-段落标签P标签（双标签）文章段落，描述信息特点：独占一行，段落之间有间隙，会随着界面大小换行 5-换行标签&lt;br&gt;单标签不识别回车键">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html学习笔记">
+<meta property="og:url" content="http://lfalc.com/2023/06/21/230621001-html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="百草园">
+<meta property="og:description" content="html学习笔记1-标签的关系父子关系（嵌套关系）兄弟关系（并列关系） 2-注释对代码进行解释说明工作  vscode中使用快捷键ctrl+&#x2F; 3-标题标签标签名：h1-h6（双标签）h1-h6逐级递减h1-标题&#x2F;logo独占一行 4-段落标签P标签（双标签）文章段落，描述信息特点：独占一行，段落之间有间隙，会随着界面大小换行 5-换行标签&lt;br&gt;单标签不识别回车键">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-21T03:57:24.435Z">
+<meta property="article:modified_time" content="2023-06-21T03:49:23.223Z">
+<meta property="article:author" content="qiu">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://lfalc.com/2023/06/21/230621001-html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="百草园" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+
+  <!-- header头部 -->
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/DDH-qiu" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">qiu</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">一条大懒狗</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/DDH-qiu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+
+  <!-- 侧栏 -->
+  
+
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>正在持续建设中!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algotithm/">algotithm</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/algotithm/python/">python</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/note/">note</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sundry/">sundry</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E4%B8%9A/">课业</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/" rel="tag">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/" rel="tag">Tools</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algotithm/" rel="tag">algotithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/" rel="tag">note</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sundry/" rel="tag">sundry</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BE%E4%B8%9A/" rel="tag">课业</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Latex/" style="font-size: 13px;">Latex</a> <a href="/tags/Tools/" style="font-size: 13px;">Tools</a> <a href="/tags/algotithm/" style="font-size: 13.5px;">algotithm</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/note/" style="font-size: 13px;">note</a> <a href="/tags/python/" style="font-size: 13.5px;">python</a> <a href="/tags/sundry/" style="font-size: 13px;">sundry</a> <a href="/tags/web/" style="font-size: 13px;">web</a> <a href="/tags/%E8%AF%BE%E4%B8%9A/" style="font-size: 14px;">课业</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/06/21/230621001-html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="title">html学习笔记</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-06-21T03:57:24.435Z" itemprop="datePublished">2023-06-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/note/">note</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/02/19/230219001-DCnote1/" class="title">特征值与特征向量</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-02-18T16:00:00.000Z" itemprop="datePublished">2023-02-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/Tools/">Tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/12/10/221210001-latex_1/" class="title">latex在使用过程中遇到的问题</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-12-10T11:30:00.000Z" itemprop="datePublished">2022-12-10</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/algotithm/">algotithm</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/algotithm/python/">python</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/11/28/221128001-algorithm-2/" class="title">straight_line_all</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-11-28T11:30:00.000Z" itemprop="datePublished">2022-11-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/algotithm/">algotithm</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/algotithm/python/">python</a>
+              </p>
+              <p class="item-title">
+                <a href="/2022/10/25/221025001-algorithm-1/" class="title">straight_line</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-10-25T11:30:00.000Z" itemprop="datePublished">2022-10-25</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+    
+  
+
+  <!-- 文章本体 -->
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-230621001-html学习笔记" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      html学习笔记
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/06/21/230621001-html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+	  <time datetime="2023-06-21T03:57:24.435Z" itemprop="datePublished">2023-06-21</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/web/" rel="tag">web</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/06/21/230621001-html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.6k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="html学习笔记"><a href="#html学习笔记" class="headerlink" title="html学习笔记"></a>html学习笔记</h1><h2 id="1-标签的关系"><a href="#1-标签的关系" class="headerlink" title="1-标签的关系"></a>1-标签的关系</h2><p>父子关系（嵌套关系）<br>兄弟关系（并列关系）</p>
+<h2 id="2-注释"><a href="#2-注释" class="headerlink" title="2-注释"></a>2-注释</h2><p>对代码进行解释说明工作</p>
+<!-- -->
+<p>vscode中使用快捷键ctrl+&#x2F;</p>
+<h2 id="3-标题标签"><a href="#3-标题标签" class="headerlink" title="3-标题标签"></a>3-标题标签</h2><p>标签名：h1-h6（双标签）<br>h1-h6逐级递减<br>h1-标题&#x2F;logo<br>独占一行</p>
+<h2 id="4-段落标签"><a href="#4-段落标签" class="headerlink" title="4-段落标签"></a>4-段落标签</h2><p>P标签（双标签）<br>文章段落，描述信息<br>特点：独占一行，段落之间有间隙，会随着界面大小换行</p>
+<h2 id="5-换行标签"><a href="#5-换行标签" class="headerlink" title="5-换行标签"></a>5-换行标签</h2><p><code>&lt;br&gt;单标签</code><br>不识别回车键使用<code>&lt;br&gt;</code>进行换行</p>
+<h2 id="6-水平线效果"><a href="#6-水平线效果" class="headerlink" title="6-水平线效果"></a>6-水平线效果</h2><p><code>&lt;hr&gt;</code>单标签，增加水平线的效果</p>
+<h2 id="7-文本格式化标签"><a href="#7-文本格式化标签" class="headerlink" title="7-文本格式化标签"></a>7-文本格式化标签</h2><p>行内元素<br>开始标签 内容 结束标签<br>作用：为文本添加特殊格式，以突出文本<br>加粗 strong b<br>倾斜 em i<br>下划线 ins u<br>删除线 del s<br>strong，em，ins，del自带强调含义（常用）</p>
+<h2 id="8-图像标签"><a href="#8-图像标签" class="headerlink" title="8-图像标签"></a>8-图像标签</h2><p>单标签，行内元素<br><code>&lt;img src=&quot;URL&quot;&gt;</code><br>src指定图片位置<br>图像标签属性<br>alt - 替代文本<br>title - 提示文本<br>width - 图片的宽度<br>height - 图片的高度<br>不区分先后顺序</p>
+<h2 id="9-网页资源路径"><a href="#9-网页资源路径" class="headerlink" title="9-网页资源路径"></a>9-网页资源路径</h2><p>相对路径<br>绝对路径<br>网址链接路径<br>当前文件夹 .&#x2F;<br>上一级文件夹 ..&#x2F;</p>
+<h2 id="10-超链接"><a href="#10-超链接" class="headerlink" title="10-超链接"></a>10-超链接</h2><p><code>&lt;a href=&quot;URL&quot;&gt;&lt;/a&gt;</code><br>URL-网址，页面地址等<br>超链接属性<br><code>target=&quot;_blank&quot;</code>新窗口打开页面</p>
+<h2 id="11-音频标签"><a href="#11-音频标签" class="headerlink" title="11-音频标签"></a>11-音频标签</h2><p><code>&lt;audio src=&quot;URL&quot;&gt;&lt;audio&gt;</code><br>URL-音频地址<br>音频标签常用属性<br>src 地址（必有） MP3，OGG，WAV格式<br>controls 显示控制面板<br>loop 循环播放<br>dutoplay 自动播放 浏览器默认不播放<br>（html5中，属性与值相同可只写一个（简写化））</p>
+<h2 id="12-视频标签"><a href="#12-视频标签" class="headerlink" title="12-视频标签"></a>12-视频标签</h2><p><code>&lt;video src=&quot;URL&quot;&gt;&lt;video&gt;</code><br>src 视频地址 MP4，webm，ogg<br>controls 显示视频控制面板<br>loop 循环播放<br>mvted 静音播放<br>autoplay 自动播放 浏览器默认不播放</p>
+<h2 id="13-列表"><a href="#13-列表" class="headerlink" title="13-列表"></a>13-列表</h2><p>布局内容排列整齐的区域<br>分类：无序列表，有序列表，定义列表</p>
+<h3 id="13-1-无序列表"><a href="#13-1-无序列表" class="headerlink" title="13.1-无序列表"></a>13.1-无序列表</h3><p>布局排列整齐的不需要规定顺序的区域<br>标签：ul嵌套li，ul是无序列表，li是列表条目<br>ul标签里只包含li标签<br>li标签里可以包裹任何内容</p>
+<h3 id="13-2有序列表"><a href="#13-2有序列表" class="headerlink" title="13.2有序列表"></a>13.2有序列表</h3><p>布局排列整齐的需要规定顺序的区域<br>标签：ol嵌套li，ol是有序列表，li是列表条目<br>ol标签里只包含li标签<br>li标签里可以包裹任何内容</p>
+<h3 id="13-3定义列表"><a href="#13-3定义列表" class="headerlink" title="13.3定义列表"></a>13.3定义列表</h3><p>dl嵌套dt和dd，dl是定义列表，dt是定义列表的标题，dd是定义列表的描述&#x2F;详情<br>dl里面只能包含dt和dd标签<br>dt和dd里面可以包含任何内容</p>
+<h2 id="14-表格"><a href="#14-表格" class="headerlink" title="14-表格"></a>14-表格</h2><p>用来展示数据，双标签<br>标签：table嵌套tr，tr嵌套td&#x2F;th<br>table 表格<br>tr 行<br>th 表头单元格<br>td 内容单元格<br>在网页中，表格默认没有框线，使用border属性可以为表格添加边框线<br><code>&lt;table border=&quot;像素大小&quot;&gt;&lt;/table&gt;</code></p>
+<h3 id="14-1表格结构标签"><a href="#14-1表格结构标签" class="headerlink" title="14.1表格结构标签"></a>14.1表格结构标签</h3><p>用表格结构标签把内容划分区域，让表格结构更清晰，语义更清晰<br>thead 表格头部<br>tbody 表格主体<br>tfoot 表格底部</p>
+<h3 id="14-2合并单元格"><a href="#14-2合并单元格" class="headerlink" title="14.2合并单元格"></a>14.2合并单元格</h3><p>将多个单元格合并成一个单元格，以合并同类信息<br>·跨行合并<br>·跨列合并<br>合并单元格的一般步骤<br>    （1）明确合并的目标<br>    （2）保留最左最上的表格，添加属性，取值是数字，表示需要合并的单元格数量<br>        1）跨行合并：保留最上单元格，添加属性rowspan<br>        2）跨列合并：保留最左单元格，添加属性colspan<br>    （3）删除其他单元格</p>
+<h2 id="15-表单"><a href="#15-表单" class="headerlink" title="15-表单"></a>15-表单</h2><p>收集用户信息（登录页面，注册页面，搜索页面）</p>
+<h3 id="15-1input标签基本使用"><a href="#15-1input标签基本使用" class="headerlink" title="15.1input标签基本使用"></a>15.1input标签基本使用</h3><p>文本框，密码框<br><code>&lt;input type=&quot;...&quot;&gt;</code><br>type属性值：<br>text 文本框（单行文本）<br>password 密码框 ***<br>radio 单选框<br>checkbox 多选框<br>file 上传文件</p>
+<h3 id="15-2input标签占位文本"><a href="#15-2input标签占位文本" class="headerlink" title="15.2input标签占位文本"></a>15.2input标签占位文本</h3><p>占位文本：提示信息<br><code>&lt;input type=&quot;...&quot; blaceholder=&quot;提示信息&quot;&gt;</code><br>文本框密码框均可用</p>
+<h3 id="15-3单选框"><a href="#15-3单选框" class="headerlink" title="15.3单选框"></a>15.3单选框</h3><p>常用属性<br>name 控件名称 控件分组，同组只能选中一个<br>checked 默认选中值 属性名和属性值相同，简写为一个单词</p>
+<h3 id="15-4上传文件"><a href="#15-4上传文件" class="headerlink" title="15.4上传文件"></a>15.4上传文件</h3><p>默认只能上传一个文件，添加multiple属性可以实现多个文件上传功能<br><code>&lt;input type=&quot;file&quot; multiple&gt;</code></p>
+<h3 id="15-5多选框（复选框）"><a href="#15-5多选框（复选框）" class="headerlink" title="15.5多选框（复选框）"></a>15.5多选框（复选框）</h3><p>默认选中：checked<br><code>&lt;input type=&quot;checkbox&quot; checked&gt;</code></p>
+<h2 id="16-下拉菜单"><a href="#16-下拉菜单" class="headerlink" title="16-下拉菜单"></a>16-下拉菜单</h2><p>单击下拉事件<br>标签：select嵌套option<br>select是下拉菜单整体<br>option是下拉菜单的每一项<br>selected属性默认选中</p>
+<h2 id="17-文本域"><a href="#17-文本域" class="headerlink" title="17-文本域"></a>17-文本域</h2><p>多行输入文本的表单控件<br>标签：textared 双标签<br><code>&lt;textarea&gt;提示文字&lt;/textarea&gt;</code><br>拖拽放大缩小功能一般禁用</p>
+<h2 id="18-label标签"><a href="#18-label标签" class="headerlink" title="18-label标签"></a>18-label标签</h2><p>为标签添加说明文本<br>可用label标签绑定文字和表单控件的关系，增大表单控件的点击范围<br>写法1：<br>    ·label标签只包裹内容，不包裹表单控件<br>    ·设置label标签的for属性值和表单控件的id属性值相同<br>    <code>	&lt;input type=&quot;radio&quot; id=&quot;man&quot;&gt;&lt;label for=&quot;man&quot;&gt;男&lt;label&gt;</code><br>写法2：<br>    使用label标签包裹文字和表单控件不需要属性<br>    <code>&lt;babel&gt;&lt;input type=&quot;radio&quot;&gt;女&lt;/label&gt;</code><br>适用范围：文本框，密码框，上传文件，单选框，多选框，下拉菜单，文本域等</p>
+<h2 id="19-按钮"><a href="#19-按钮" class="headerlink" title="19-按钮"></a>19-按钮</h2><p>button标签<br><code>&lt;button type=&quot;&quot;&gt;按钮&lt;/button&gt;</code><br>type属性值：<br>submit 提交按钮 点击可将数据提交到后台<br>reset 重置按钮 将表单控件恢复默认值<br>button 普通按钮 没有功能，配合JavaScript使用<br><code>*&lt;form action=&quot;发送数据地址&quot;&gt;&lt;/from&gt;</code><br>使用from标签统一管理</p>
+<h2 id="20-无语义的布局标签"><a href="#20-无语义的布局标签" class="headerlink" title="20-无语义的布局标签"></a>20-无语义的布局标签</h2><p>作用：布局网页，划分网页区域，摆放内容<br>div 独占一行<br>span 不换行</p>
+<h2 id="21-字符实体"><a href="#21-字符实体" class="headerlink" title="21-字符实体"></a>21-字符实体</h2><p>在网页中显示预留字符<br>空格 space &amp;nbsp;<br>小于号 &lt; &lt;<br>大于号 &gt; &gt;</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://lfalc.com/2023/06/21/230621001-html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="html学习笔记" target="_blank" rel="external">http://lfalc.com/2023/06/21/230621001-html学习笔记/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/DDH-qiu" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/DDH-qiu" target="_blank"><span class="text-dark">qiu</span><small class="ml-1x">一条大懒狗</small></a></h3>
+        <div>勤奋的懒狗</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2023/02/19/230219001-DCnote1/" title="特征值与特征向量"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+
+  <!-- 脚注 -->
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/DDH-qiu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2023 qiu
+        
+        <div class="publishby">
+        	Power by  <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>
+        </div>
+    </div>
+</footer>
+
+  <!-- JS脚本 -->
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: true,
+    notify: false,
+    appId: '5ikWc7qdK3I3emkxMMtRe57x-gzGzoHsz',
+    appKey: 'RpsPwHdPyCep3wsqYzUPRaGk',
+    placeholder: '嗨嗨快来留下你的足迹',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
